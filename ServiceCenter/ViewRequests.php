@@ -44,7 +44,45 @@ if(isset($_GET["rejID"]))
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>View Request</title>
 </head>
-
+<style>
+        body {
+            background-color: #fff;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        table {
+            width: 80%;
+            margin: 50px auto;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ff4d4d;
+        }
+        th, td {
+            padding: 15px;
+            text-align: center;
+        }
+        th {
+            background-color: #ff4d4d;
+            color: white;
+            font-size: 18px;
+        }
+        td {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        .a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #ff4d4d;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .a:hover {
+            background-color: #ff1a1a;
+        }
+    </style>
 <body>
 
 <table border="1" align="center">
