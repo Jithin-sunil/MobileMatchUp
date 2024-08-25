@@ -20,16 +20,40 @@ if(isset($_POST['btnsubmit'])!=null)
 	$temp=$_FILES['fileproof']['tmp_name'];
 	move_uploaded_file($temp,'../Assets/Files/UserDocs/'.$proof);
 	
-	
-	
-	$insQry="insert into tbl_user(user_name,user_gender,user_contact,user_email,user_password,place_id,user_photo,user_proof,user_address)
+	$u="select * from tbl_user where user_email = '".$email."'";
+  $r=$con->query($u);
+  $c="select * from tbl_company where company_email = '".$email."'";
+  $re=$con->query($c);
+	$s="select * from tbl_servicecenter where servicecenter_email = '".$email."'";
+  $res=$con->query($s);
+  $a="select * from tbl_admin where admin_email = '".$email."'";
+  $row=$con->query($a);
+  if($r->num_rows>0 || $re->num_rows>0 || $res->num_rows>0 || $row->num_rows>0)
+  {
+    ?>
+    <script>
+      alert('Email already exists');
+    </script>
+    <?php
+  }
+  else {
+    $insQry="insert into tbl_user(user_name,user_gender,user_contact,user_email,user_password,place_id,user_photo,user_proof,user_address)
 	values('$name','$gender','$contact','$email','$password','$place','$photo','$proof','$address')";
 	
 	if($con->query($insQry))
 		{
-					echo"inserted";
+      ?>
+					<script>
+          alert('Registered');
+          window.location='Login.php';
+          </script>
+          <?php
 		}
 }
+
+  }
+
+	
 ?>
 
 
@@ -157,7 +181,7 @@ label {
       <td>Gender</td>
       <td><input type="radio" name="gender" id="gender" value="Male" />
         Male  <input type="radio" name="gender" id="gender" value="Female" />
-        <label for="rfemale">Female</label></td>
+        Female</td>
     </tr>
     <tr>
       <td>Contact</td>
@@ -251,5 +275,58 @@ include('Footer.php');
       }
     });
   }
+  document.getElementById('form1').onsubmit = function() {
+    var name = document.getElementById('txtname').value;
+    var email = document.getElementById('txtemail').value;
+    var contact = document.getElementById('txtcontact').value;
+    var password = document.getElementById('txtpassword').value;
+    var confirmPassword = document.getElementById('txtconfirmpassword').value;
+
+    // Name validation (only letters and spaces allowed)
+    var namePattern = /^[a-zA-Z\s]+$/;
+    if (!namePattern.test(name)) {
+        alert('Please enter a valid name (only letters and spaces are allowed).');
+        return false;
+    }
+
+    // Email validation
+    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if (!emailPattern.test(email)) {
+        alert('Please enter a valid email address.');
+        return false;
+    }
+
+    // Contact validation (10-digit number)
+    var contactPattern = /^[0-9]{10}$/;
+    if (!contactPattern.test(contact)) {
+        alert('Please enter a valid 10-digit contact number.');
+        return false;
+    }
+
+    // Password validation (at least 6 characters, with at least one digit, one uppercase letter, and one lowercase letter)
+    var passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+    if (!passwordPattern.test(password)) {
+        alert('Password must be at least 6 characters long and include at least one digit, one uppercase letter, and one lowercase letter.');
+        return false;
+    }
+
+    // Confirm Password validation
+    if (password !== confirmPassword) {
+        alert('Passwords do not match.');
+        return false;
+    }
+
+    // Check if all required fields are filled
+    var requiredFields = ['txtname', 'gender', 'txtcontact', 'txtemail', 'txtpassword', 'txtconfirmpassword', 'selDistrict', 'sel_place', 'txtaddress', 'filephoto', 'fileproof'];
+    for (var i = 0; i < requiredFields.length; i++) {
+        if (document.getElementById(requiredFields[i]).value === '') {
+            alert('Please fill out all required fields.');
+            return false;
+        }
+    }
+
+    return true;
+};
+
 
 </script>

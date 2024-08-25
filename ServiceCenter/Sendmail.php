@@ -62,19 +62,19 @@ if(isset($_POST["btn_send"]))
 <body>
 <div id="tab" align="center">
 <h2>Request</h2>
-<form id="form1" name="form1" method="post" action="">
+<form id="form1" name="form1" method="post"  action="">
   <table>
     <tr>
         <td>Name</td>
-        <td><input type="text" name="txt_name" id=""></td>
+        <td><input type="text" name="txt_name" required autocomplete="off" pattern="[a-zA-Z ]{4,15}" title="Enter a valid name" id=""></td>
     </tr>
     <tr>
         <td>Email</td>
-        <td><input type="email" name="txt_mail" id=""></td>
+        <td><input type="email" name="txt_mail" autocomplete="off" required pattern="/^[a-zA-Z0-9.!#$%&*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" id=""></td>
     </tr>
     <tr>
         <td>Message</td>
-        <td><textarea name="txt_msg" id=""></textarea></td>
+        <td><textarea name="txt_msg" required autocomplete="off" id=""></textarea></td>
     </tr>
     <tr>
         <td colspan="2"><input type="submit" value="Send" name="btn_send"></td>
