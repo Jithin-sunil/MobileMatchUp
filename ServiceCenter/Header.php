@@ -76,8 +76,8 @@ include('SessionValidation.php');?>
                                         <li> <a href="Homepage.php">HomePage</a> </li>
                                         <li><a href="Servicecenterprofile.php">ServiceCenter Profile</a></li>
                                         <li><a href="ViewRequests.php">View Request </a></li>
-                                        <li><a href="AcceptedReq.php">Accepted Request</a></li>
-                                        <li><a href="RejectedReq.php">Rejected Request</a></li>
+                                        <!-- <li><a href="AcceptedReq.php">Accepted Request</a></li>
+                                        <li><a href="RejectedReq.php">Rejected Request</a></li> -->
                                         <li><a href="ServiceType.php">Service Type</a></li>
                                         <li class="last">
                                         <li><a href="Logout.php"><i class="fa-solid fa-right-from-bracket"></i></a></li>
@@ -87,7 +87,7 @@ include('SessionValidation.php');?>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 offset-md-6">
+                    <!-- <div class="col-md-6 offset-md-6">
                         <div class="location_icon_bottum">
                             <ul>
                                 <li><img src="../Assets/Templates/Main/icon/call.png" />(+71)9876543109</li>
@@ -95,7 +95,7 @@ include('SessionValidation.php');?>
                                 <li><img src="../Assets/Templates/Main/icon/loc.png" />Location</li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

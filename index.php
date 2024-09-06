@@ -29,20 +29,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="Assets/Templates/Main/css/owl.carousel.min.css">
     <link rel="stylesheet" href="Assets/Templates/Main/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
-        media="screen">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 </head>
 <!-- body -->
-<style>
-    img {
-    max-width: 50%;
-    height: fit-content;
-}
-</style>
+
 <body class="main-layout ">
     <!-- loader  -->
     <div class="loader_bg">
@@ -59,8 +52,8 @@
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
                         <div class="full">
                             <div class="center-desk">
-                            <div class="logo">
-                                    <a href="Guest/Login.php"><img src="Assets/Templates/Main/images/MobileMatchUp2.webp" alt="#"></a>
+                                <div class="logo">
+                                    <a href="index.html"><img src="Assets/Templates/Main/images/logo.png" alt="#"></a>
                                 </div>
                             </div>
                         </div>
@@ -70,23 +63,29 @@
                             <div class="limit-box">
                                 <nav class="main-menu">
                                     <ul class="menu-area-main">
-                                        <li><a href="Guest/NewUser.php">SignUp User</a></li>
-                                        <li><a href="Guest/Company.php">SignUp Mobile Company</a></li>
-                                        <li><a href="Guest/ServiceCenter.php">SignUp Service Center</a></li>
+                                        <li class="active"> <a href="index.php">Home</a> </li>
+                                        <li> <a href="Guest/NewUser.php">User Registration</a> </li>
+                                        <li><a href="Guest/ServiceCenter.php">Service Center Registration</a></li>
+                                        <li><a href="Guest/Company.php">Company Registration</a></li>
+                                        <li><a href="Guest/Login.php">Login</a></li>
+                                        <!-- <li><a href="contact.html">Contact Us</a></li> -->
+                                        <!-- <li class="last">
+                                            <a href="#"><img src="Assets/Templates/Main/images/search_icon.png" alt="icon" /></a>
+                                        </li> -->
                                     </ul>
                                 </nav>
                             </div>
                         </div>
                     </div>
-                    <!--<div class="col-md-6 offset-md-6">
+                    <!-- <div class="col-md-6 offset-md-6">
                         <div class="location_icon_bottum">
                             <ul>
-                                <li><img src="../Assets/Templates/Main/icon/call.png" />(+71)9876543109</li>
-                                <li><img src="../Assets/Templates/Main/icon/email.png" />demo@gmail.com</li>
-                                <li><img src="../Assets/Templates/Main/icon/loc.png" />Location</li>
+                                <li><img src="icon/call.png" />(+71)9876543109</li>
+                                <li><img src="icon/email.png" />demo@gmail.com</li>
+                                <li><img src="icon/loc.png" />Location</li>
                             </ul>
                         </div>
-                    </div>-->
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -95,14 +94,14 @@
     <!-- end header -->
     <section class="slider_section">
         <div id="myCarousel" class="carousel slide banner-main" data-ride="carousel">
-            <div class="carousel-inner">
+             <div class="carousel-inner">
                 <div class="carousel-item active">
+                    <img class="first-slide" src="Assets/Templates/Main/images/banner.jpg" alt="First slide">
                     <div class="container">
-                        <img class="first-slide" src="Assets/Templates/Main/video.gif" width="1500" height="100" alt="First slide">
-                        <div class="carousel-caption relative">
+                    <div class="carousel-caption relative">
                             <span> Your Gateway<br>To the latest In<br>Mobile Technology</span>
                             <p>"Innovative Mobiles,Unbeatable Prices"</p>
-                            <a class="buynow" href="Guest/Login.php">login Now</a>
+                            <a class="buynow" href="#">Buy Now</a>
                             <ul class="social_icon">
                                 <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
                                 <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -111,15 +110,15 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="carousel-item">
+                <div class="carousel-item">
                     <img class="second-slide" src="Assets/Templates/Main/images/banner.jpg" alt="Second slide">
                     <div class="container">
                         <div class="carousel-caption relative">
-                            <span>The Ultimate Shopping Companion </span>
-                            <h1>Stay Ahead with the Best Mobile Technology!</h1>
-                            <p>"Discover the Best Phones at the Best Prices!
-                                Compare Features and Make Informed Choices"</p>
-                            <a class="buynow" href="Guest/Login.php">login Now</a>
+                            <span>All New Phones </span>
+                            <h1>up to 25% Flat Sale</h1>
+                            <p>It is a long established fact that a reader will be distracted by the readable content
+                                <br> of a page when looking at its layout. The point of using Lorem Ipsum is that</p>
+                            <a class="buynow" href="#">Buy Now</a>
                             <ul class="social_icon">
                                 <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
                                 <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -135,9 +134,8 @@
                             <span>All New Phones </span>
                             <h1>up to 25% Flat Sale</h1>
                             <p>It is a long established fact that a reader will be distracted by the readable content
-                                <br> of a page when looking at its layout. The point of using Lorem Ipsum is that
-                            </p>
-                            <a class="buynow" href="Guest/Login.php">login Now</a>
+                                <br> of a page when looking at its layout. The point of using Lorem Ipsum is that</p>
+                            <a class="buynow" href="#">Buy Now</a>
                             <ul class="social_icon">
                                 <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
                                 <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -145,7 +143,7 @@
                             </ul>
                         </div>
                     </div>
-                </div> -->
+                </div>
             </div>
             <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
                 <i class='fa fa-angle-left'></i>
@@ -169,16 +167,13 @@
                     <div class="about_box">
                         <h3>About Us</h3>
                         <span>Our Mobile Shop</span>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a
-                            page when looking at its layout. The point of It is a long established fact that a reader
-                            will be distracted by the readable content of a page when looking at its layout. The point
-                            of It is a long established fact that a reader will be distracted by the </p>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of It is a long established fact that a reader will be distracted by the </p>
 
                     </div>
-
-                </div>
+               
             </div>
         </div>
+    </div>
     </div>
     <!-- end about -->
 
@@ -193,7 +188,7 @@
                 </div>
             </div>
         </div>
-        <div class="brand-bg">
+        <!-- <div class="brand-bg">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
@@ -201,10 +196,10 @@
                             <img src="Assets/Templates/Main/images/1.png" alt="img" />
                             <h3>$<strong class="red">100</strong></h3>
                             <span>Mobile Phone</span>
-                            <i><img src="Assets/Templates/Main/images/star.png" /></i>
-                            <i><img src="Assets/Templates/Main/images/star.png" /></i>
-                            <i><img src="Assets/Templates/Main/images/star.png" /></i>
-                            <i><img src="Assets/Templates/Main/images/star.png" /></i>
+                            <i><img src="Assets/Templates/Main/images/star.png"/></i>
+                            <i><img src="Assets/Templates/Main/images/star.png"/></i>
+                            <i><img src="Assets/Templates/Main/images/star.png"/></i>
+                            <i><img src="Assets/Templates/Main/images/star.png"/></i>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
@@ -212,10 +207,10 @@
                             <img src="Assets/Templates/Main/images/2.png" alt="img" />
                             <h3>$<strong class="red">100</strong></h3>
                             <span>Mobile Phone</span>
-                            <i><img src="Assets/Templates/Main/images/star.png" /></i>
-                            <i><img src="Assets/Templates/Main/images/star.png" /></i>
-                            <i><img src="Assets/Templates/Main/images/star.png" /></i>
-                            <i><img src="Assets/Templates/Main/images/star.png" /></i>
+                            <i><img src="Assets/Templates/Main/images/star.png"/></i>
+                            <i><img src="Assets/Templates/Main/images/star.png"/></i>
+                            <i><img src="Assets/Templates/Main/images/star.png"/></i>
+                            <i><img src="Assets/Templates/Main/images/star.png"/></i>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
@@ -223,10 +218,10 @@
                             <img src="Assets/Templates/Main/images/3.png" alt="img" />
                             <h3>$<strong class="red">100</strong></h3>
                             <span>Mobile Phone</span>
-                            <i><img src="Assets/Templates/Main/images/star.png" /></i>
-                            <i><img src="Assets/Templates/Main/images/star.png" /></i>
-                            <i><img src="Assets/Templates/Main/images/star.png" /></i>
-                            <i><img src="Assets/Templates/Main/images/star.png" /></i>
+                            <i><img src="Assets/Templates/Main/images/star.png"/></i>
+                            <i><img src="Assets/Templates/Main/images/star.png"/></i>
+                            <i><img src="Assets/Templates/Main/images/star.png"/></i>
+                            <i><img src="Assets/Templates/Main/images/star.png"/></i>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
@@ -234,10 +229,10 @@
                             <img src="Assets/Templates/Main/images/4.png" alt="img" />
                             <h3>$<strong class="red">100</strong></h3>
                             <span>Mobile Phone</span>
-                            <i><img src="Assets/Templates/Main/images/star.png" /></i>
-                            <i><img src="Assets/Templates/Main/images/star.png" /></i>
-                            <i><img src="Assets/Templates/Main/images/star.png" /></i>
-                            <i><img src="Assets/Templates/Main/images/star.png" /></i>
+                            <i><img src="Assets/Templates/Main/images/star.png"/></i>
+                            <i><img src="Assets/Templates/Main/images/star.png"/></i>
+                            <i><img src="Assets/Templates/Main/images/star.png"/></i>
+                            <i><img src="Assets/Templates/Main/images/star.png"/></i>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mrgn">
@@ -245,10 +240,10 @@
                             <img src="Assets/Templates/Main/images/5.png" alt="img" />
                             <h3>$<strong class="red">100</strong></h3>
                             <span>Mobile Phone</span>
-                            <i><img src="Assets/Templates/Main/images/star.png" /></i>
-                            <i><img src="Assets/Templates/Main/images/star.png" /></i>
-                            <i><img src="Assets/Templates/Main/images/star.png" /></i>
-                            <i><img src="Assets/Templates/Main/images/star.png" /></i>
+                            <i><img src="Assets/Templates/Main/images/star.png"/></i>
+                            <i><img src="Assets/Templates/Main/images/star.png"/></i>
+                            <i><img src="Assets/Templates/Main/images/star.png"/></i>
+                            <i><img src="Assets/Templates/Main/images/star.png"/></i>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mrgn">
@@ -256,18 +251,18 @@
                             <img src="Assets/Templates/Main/images/6.png" alt="img" />
                             <h3>$<strong class="red">100</strong></h3>
                             <span>Mobile Phone</span>
-                            <i><img src="Assets/Templates/Main/images/star.png" /></i>
-                            <i><img src="Assets/Templates/Main/images/star.png" /></i>
-                            <i><img src="Assets/Templates/Main/images/star.png" /></i>
-                            <i><img src="Assets/Templates/Main/images/star.png" /></i>
+                            <i><img src="Assets/Templates/Main/images/star.png"/></i>
+                            <i><img src="Assets/Templates/Main/images/star.png"/></i>
+                            <i><img src="Assets/Templates/Main/images/star.png"/></i>
+                            <i><img src="Assets/Templates/Main/images/star.png"/></i>
                         </div>
                     </div>
                     <div class="col-md-12">
-                        <a class="read-more" href="Guest/Login.php">login Now</a>
+                        <a class="read-more">See More</a>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 
     <!-- end brand -->
@@ -301,13 +296,10 @@
                             <div class="full testimonial_cont text_align_center cross_layout">
                                 <div class="cross_inner">
                                     <h3>Due markes<br><strong class="ornage_color">Rental</strong></h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        Duis aute irure dolor in reprehenderit in voluptate velit ess</i>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess</i>
                                     </p>
                                     <div class="full text_align_center margin_top_30">
-                                        <img src="Assets/Templates/Main/icon/testimonial_qoute.png">
+                                        <img src="icon/testimonial_qoute.png">
                                     </div>
                                 </div>
                             </div>
@@ -322,13 +314,10 @@
                             <div class="full testimonial_cont text_align_center cross_layout">
                                 <div class="cross_inner">
                                     <h3>Due markes<br><strong class="ornage_color">Rental</strong></h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        Duis aute irure dolor in reprehenderit in voluptate velit ess</i>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess</i>
                                     </p>
                                     <div class="full text_align_center margin_top_30">
-                                        <img src="Assets/Templates/Main/icon/testimonial_qoute.png">
+                                        <img src="icon/testimonial_qoute.png">
                                     </div>
                                 </div>
                             </div>
@@ -344,13 +333,10 @@
                             <div class="full testimonial_cont text_align_center cross_layout">
                                 <div class="cross_inner">
                                     <h3>Due markes<br><strong class="ornage_color">Rental</strong></h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        Duis aute irure dolor in reprehenderit in voluptate velit ess</i>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess</i>
                                     </p>
                                     <div class="full text_align_center margin_top_30">
-                                        <img src="Assets/Templates/Main/icon/testimonial_qoute.png">
+                                        <img src="icon/testimonial_qoute.png">
                                     </div>
                                 </div>
                             </div>
@@ -365,7 +351,7 @@
     </div>
     <!-- end clients -->
     <!-- contact -->
-    <!-- <div class="contact">
+    <div class="contact">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -394,7 +380,7 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
     <!-- end contact -->
 
     <!-- footer -->
@@ -408,8 +394,7 @@
                                 <h3>Address</h3>
                                 <span>Healing Center, 176 W Streetname,New York, NY 10014, US</span>
                                 <p>(+71) 8522369417
-                                    <br>demo@gmail.com
-                                </p>
+                                    <br>demo@gmail.com</p>
                             </div>
                             <ul class="location_icon">
                                 <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
@@ -421,9 +406,9 @@
                                 <ul class="link">
                                     <li> <a href="#">Home</a></li>
                                     <li> <a href="#">About</a></li>
-
+                                    
                                     <li> <a href="#">Brand </a></li>
-                                    <li> <a href="#">Specials </a></li>
+                                    <li> <a href="#">Specials  </a></li>
                                     <li> <a href="#"> Contact us</a></li>
                                 </ul>
                             </div>
@@ -451,6 +436,22 @@
     <!-- javascript -->
     <script src="Assets/Templates/Main/js/owl.carousel.js"></script>
     <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".fancybox").fancybox({
+                openEffect: "none",
+                closeEffect: "none"
+            });
+
+            $(".zoom").hover(function() {
+
+                $(this).addClass('transition');
+            }, function() {
+
+                $(this).removeClass('transition');
+            });
+        });
+    </script>
 </body>
 
 </html>

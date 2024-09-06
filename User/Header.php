@@ -26,6 +26,7 @@ include('SessionValidation.php');
     <link rel="icon" href="../Assets/Templates/Main/images/fevicon.png" type="image/gif" />
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="../Assets/Templates/Main/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <!-- Tweaks for older IEs-->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <!-- owl stylesheets -->
@@ -36,16 +37,9 @@ include('SessionValidation.php');
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-
-    <link rel="stylesheet" href="../Assets/Templates/form.css">
 </head>
 <!-- body -->
-<style>
-    img {
-    max-width: 50%;
-    height: fit-content;
-}
-</style>
+
 <body class="main-layout ">
     <!-- loader  -->
     <!-- <div class="loader_bg">
@@ -62,8 +56,8 @@ include('SessionValidation.php');
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
                         <div class="full">
                             <div class="center-desk">
-                            <div class="logo">
-                                    <a href="Homepage.php"><img src="../Assets/Templates/Main/images/MobileMatchUp2.webp" alt="#"></a>
+                                <div class="logo">
+                                    <a href="index.html"><img src="../Assets/Templates/Main/images/logo.png" alt="#"></a>
                                 </div>
                             </div>
                         </div>
@@ -72,44 +66,48 @@ include('SessionValidation.php');
                         <div class="menu-area">
                             <div class="limit-box">
                                 <nav class="main-menu">
-                                    <ul class="menu-area-main">
-                                        
-                                        <li> <a href="HomePage.php">HomePage</a> </li>
-                                        <li> <a href="SearchProduct.php">Search</a> </li>
-                                        
-                
-                                        <li><a href="MobileComparison.php">Mobile Comparison</a></li>
-                                        <li><a href="MyProfile.php">MyProfile</a></li>
-                                        <li><a href="UsedPhone.php">Phone Selling</a></li>
-                                        <li><a href="ViewUsedPhone.php">Buy Used Phones</a></li>
-                                        <li><a href="Servicebooking.php">Service Center</a></li>
-                                        <li><a href="MyBooking.php">My Booking</a></li>
-                                        <li><a href="Mycart.php">My Cart</a></li>
-                                        <li class="last">
-                                            <a href="#"><img src="../Assets/Templates/Main/images/search_icon.png" alt="icon" /></a>
-                                        </li>
-                                    </ul>
+                                <ul class="menu-area-main">
+
+<li> <a href="HomePage.php"><i class="fa-solid fa-house"></i></a> </li>
+
+
+<li><a href="MobileComparison.php">Mobile Comparison</a></li>
+
+<li><a href="UsedPhone.php">Phone Selling</a></li>
+<li><a href="ViewUsedPhone.php">Buy Used Phones</a></li>
+<li><a href="ViewServiceCenter.php">Service Center</a></li>
+<li><a href="Servicebooking.php">Service Bookings</a></li>
+<li><a href="MyBooking.php">My Booking</a></li>
+<li><a href="UsedPhoneBookings.php">Used Phone Booking</a></li>
+<li><a href="MyPhone_sell.php">MyPhone</a></li>
+<li><a href="MyProfile.php"><i class="fa-regular fa-user"></a></i></li>
+<!-- <li><a href="ChatList.php"><i class="fa-brands fa-facebook-messenger"></i></a> -->
+</li>
+<li><a href="Mycart.php"><i class="fa-solid fa-cart-shopping"></i></a></li>
+<li class="last">
+    <a href="SearchProduct.php"> <img
+            src="../Assets/Templates/Main/images/search_icon.png"
+            alt="icon" /></a>
+</li>
+<li><a href="Logout.php"><i class="fa-solid fa-right-from-bracket"></i></a></li>
+</ul>
                                 </nav>
                             </div>
                         </div>
                     </div>
-                    <!--<div class="col-md-6 offset-md-6">
+                    <!-- <div class="col-md-6 offset-md-6">
                         <div class="location_icon_bottum">
                             <ul>
-                                <li><img src="../Assets/Templates/Main/icon/call.png" />(+71)9876543109</li>
-                                <li><img src="../Assets/Templates/Main/icon/email.png" />demo@gmail.com</li>
-                                <li><img src="../Assets/Templates/Main/icon/loc.png" />Location</li>
+                                <li><img src="icon/call.png" />(+71)9876543109</li>
+                                <li><img src="icon/email.png" />demo@gmail.com</li>
+                                <li><img src="icon/loc.png" />Location</li>
                             </ul>
                         </div>
-                    </div>--> 
+                    </div> -->
                 </div>
             </div>
         </div>
-       
-         
-            
-
-         
+        <!-- end header inner -->
     </header>
      <!-- end header inner -->
       <br><br>

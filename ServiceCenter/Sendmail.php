@@ -10,9 +10,12 @@ require '../Assets/phpMail/src/SMTP.php';
 
 if(isset($_POST["btn_send"]))
 {
-	
-		$name=$_POST["txt_name"];
-		$email=$_POST["txt_mail"];
+	$user="select * from tbl_user where  user_id=".$_GET["uid"];
+    $user_data=$con->query($user);
+    $row=$user_data->fetch_assoc();
+    $email=$row["user_email"];
+		// $name=$_POST["txt_name"];
+		// $email=$_POST["txt_mail"];
 		$message=$_POST["txt_msg"];
 		
 	 $mail = new PHPMailer(true);
@@ -20,24 +23,25 @@ if(isset($_POST["btn_send"]))
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'mobilematchupoffical@gmail.com'; // Your gmail
-    $mail->Password = 'ngtfiukpkcrjdopq'; // Your gmail app password
+    $mail->Username = 'mobilematchup2024@gmail.com'; // Your gmail
+    $mail->Password = 'qyir eait bqdg rzkd'; // Your gmail app password
     $mail->SMTPSecure = 'ssl';
     $mail->Port = 465;
   
-    $mail->setFrom('mobilematchupoffical@gmail.com'); // Your gmail
+    $mail->setFrom('mobilematchup2024@gmail.com'); // Your gmail
   
     $mail->addAddress($email);
   
     $mail->isHTML(true);
   
     $mail->Subject = "MobileMatchUp ";  //Your Subject goes here
-    $mail->Body = "Service Updates"; //Mail Body goes here
+    $mail->Body =$message ; //Mail Body goes here
   if($mail->send())
   {
     ?>
 <script>
     alert("Email Send")
+    window.location
 </script>
     <?php
   }
@@ -119,14 +123,14 @@ if(isset($_POST["btn_send"]))
     <h2>Request</h2>
     <form id="form1" name="form1" method="post" action="">
         <table>
-            <tr>
+            <!-- <tr>
                 <td>Name</td>
                 <td><input type="text" name="txt_name" required autocomplete="off" pattern="[a-zA-Z ]{4,15}" title="Enter a valid name" id=""></td>
-            </tr>
-            <tr>
+            </tr> -->
+            <!-- <tr>
                 <td>Email</td>
                 <td><input type="email" name="txt_mail" autocomplete="off" required pattern="^[a-zA-Z0-9.!#$%&*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" id=""></td>
-            </tr>
+            </tr> -->
             <tr>
                 <td>Message</td>
                 <td><textarea name="txt_msg" required autocomplete="off" id=""></textarea></td>

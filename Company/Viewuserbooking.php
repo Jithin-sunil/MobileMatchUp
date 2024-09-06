@@ -4,7 +4,7 @@ include('Header.php');
 if(isset($_GET["cid"]))
 
 	{
-		$upQry="update tbl_cart set cart_status='".$_GET["sts"]."' where cart_id='".$_GET["cid"]."' ";
+		$upQry="update tbl_booking set booking_status='".$_GET["sts"]."' where booking_id='".$_GET["cid"]."' ";
 		if($con->query($upQry))
 		{
 			?>
@@ -77,51 +77,52 @@ if(isset($_GET["cid"]))
                  INNER JOIN tbl_mobile mo ON c.mobile_id = mo.mobile_id 
                  INNER JOIN tbl_mobiledetails m ON mo.mobile_id = m.mobile_id 
                  INNER JOIN tbl_user u ON b.user_id = u.user_id 
-                 WHERE mo.company_id = ?";
-    $stmt = $con->prepare($selquery);
-    $stmt->bind_param('i', $_SESSION['company_id']);
-    $stmt->execute();
-    $result = $stmt->get_result();
+                 WHERE mo.company_id = '".$_SESSION['company_id']."' and booking_status >0 ";
+   
+    $result = $con->query($selquery);
     $i = 0;
     while($data = $result->fetch_assoc()) { 
         $i++;
     ?>
     <tr>
         <td><?php echo $i; ?></td>
-        <td><?php echo htmlspecialchars($data["user_name"]); ?></td>
-        <td><?php echo htmlspecialchars($data["user_contact"]); ?></td>
-        <td><?php echo htmlspecialchars($data["user_address"]); ?></td>
-        <td><?php echo htmlspecialchars($data["mobiledetails_name"]); ?></td>
-        <td><?php echo htmlspecialchars($data["mobiledetails_price"]); ?></td>
+        <td><?php echo $data["user_name"] ?></td>
+        <td><?php echo $data["user_contact"] ?></td>
+        <td><?php echo $data["user_address"] ?></td>
+        <td><?php echo $data["mobiledetails_name"] ?></td>
+        <td><?php echo $data["mobiledetails_price"] ?></td>
         <td>
             <?php 
-            switch($data["booking_status"]) {
-                case 1:
-                    echo ($data["cart_status"] == 1) ? "Payment pending...." : '';
-                    break;
-                case 2:
-                    switch($data["cart_status"]) {
-                        case 2:
-                            echo 'Payment completed / <a href="Viewuserbooking.php?cid=' . urlencode($data["cart_id"]) . '&sts=3">Pack product</a>';
-                            break;
-                        case 3:
-                            echo 'Product packed / <a href="Viewuserbooking.php?cid=' . urlencode($data["cart_id"]) . '&sts=4">Ship Product</a>';
-                            break;
-                        case 4:
-                            echo 'Product shipped / <a href="Viewuserbooking.php?cid=' . urlencode($data["cart_id"]) . '&sts=5">Product Delivered</a>';
-                            break;
-                        case 5:
-                            echo 'Order Completed';
-                            break;
-                    }
-                    break;
+            if ($data["booking_status"]==1) {
+               
+                    echo  "Payment pending...." ;
+            } 
+            else if($data["booking_status"]==2) {
+               
+                echo 'Payment completed / <a href="Viewuserbooking.php?cid=' . $data["booking_id"]. '&sts=3">Pack product</a>';
+
             }
+            else if($data["booking_status"]==3)
+            {
+                echo 'Product packed / <a href="Viewuserbooking.php?cid=' . $data["booking_id"]. '&sts=4">Ship Product</a>';
+
+            }
+            else if($data["booking_status"]==4)
+            {
+                echo 'Product shipped / <a href="Viewuserbooking.php?cid=' . $data["booking_id"] . '&sts=5">Product Delivered</a>';
+
+            }
+            else if($data["booking_status"]==5)
+            {
+                echo 'Order Completed';
+            }
+                   
             ?>
         </td>
     </tr>
     <?php
     }
-    $stmt->close();
+   
     ?>
 </table>
 </body>

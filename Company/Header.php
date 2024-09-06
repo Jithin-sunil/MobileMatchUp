@@ -25,6 +25,7 @@ include('SessionValidation.php');
     <link rel="icon" href="../Assets/Templates/Main/images/fevicon.png" type="image/gif" />
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="../Assets/Templates/Main/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <!-- Tweaks for older IEs-->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <!-- owl stylesheets -->
@@ -32,20 +33,12 @@ include('SessionValidation.php');
     <link rel="stylesheet" href="../Assets/Templates/Main/css/owl.carousel.min.css">
     <link rel="stylesheet" href="../Assets/Templates/Main/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 </head>
 <!-- body -->
-<style>
-    img {
-    max-width: 50%;
-    height: fit-content;
-}
-</style>
+
 <body class="main-layout ">
     <!-- loader  -->
     <div class="loader_bg">
@@ -63,7 +56,7 @@ include('SessionValidation.php');
                         <div class="full">
                             <div class="center-desk">
                                 <div class="logo">
-                                    <a href="Homepage.php"><img src="../Assets/Templates/Main/images/MobileMatchUp2.webp" alt="#"></a>
+                                    <a href="index.html"><img src="../Assets/Templates/Main/images/logo.png" alt="#"></a>
                                 </div>
                             </div>
                         </div>
@@ -72,20 +65,20 @@ include('SessionValidation.php');
                         <div class="menu-area">
                             <div class="limit-box">
                                 <nav class="main-menu">
-                                    <ul class="menu-area-main">
-                                        <li class="active"> <a href="Homepage.php">Homepage</a> </li>
-                                        
-                                        <li><a href="Companyprofile.php">Company Profile</a></li>
+                                <ul class="menu-area-main">
+
+<li> <a href="HomePage.php"><i class="fa-solid fa-house"></i></a> </li>
+
+
+<!-- <li><a href="Companyprofile.php">Company Profile</a></li> -->
                                         <li><a href="Mobile.php">Add Phones</a></li>
                                 
                                         <li><a href="ViewUserbooking.php">View UserBooking</a></li>
-                                        <li><a href="Viewcomment.php">View Comments</a></li>
-                                        <li><a href="Logout.php"><i class="fa-solid fa-right-from-bracket"></i></a></li>
 
-                                        <li class="last">
-                                            <!-- <a href="#"><img src="../Assets/Templates/Main/images/search_icon.png" alt="icon" /></a> -->
-                                        </li>
-                                    </ul>
+<li><a href="Viewcomment.php">View Comments</a></li>
+<li><a href="Companyprofile.php"><i class="fa-regular fa-user"></a></i></li>
+<li><a href="Logout.php"><i class="fa-solid fa-right-from-bracket"></i></a></li>
+</ul>
                                 </nav>
                             </div>
                         </div>
@@ -93,9 +86,9 @@ include('SessionValidation.php');
                     <!-- <div class="col-md-6 offset-md-6">
                         <div class="location_icon_bottum">
                             <ul>
-                                <li><img src="../Assets/Templates/Main/icon/call.png" />(+71)9876543109</li>
-                                <li><img src="../Assets/Templates/Main/icon/email.png" />demo@gmail.com</li>
-                                <li><img src="../Assets/Templates/Main/icon/loc.png" />Location</li>
+                                <li><img src="icon/call.png" />(+71)9876543109</li>
+                                <li><img src="icon/email.png" />demo@gmail.com</li>
+                                <li><img src="icon/loc.png" />Location</li>
                             </ul>
                         </div>
                     </div> -->
@@ -104,5 +97,6 @@ include('SessionValidation.php');
         </div>
         <!-- end header inner -->
     </header>
+    <!-- end header -->
     <br><br><br>
     <!-- end header -->

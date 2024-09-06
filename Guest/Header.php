@@ -29,9 +29,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../Assets/Templates/Main/css/owl.carousel.min.css">
     <link rel="stylesheet" href="../Assets/Templates/Main/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
-        media="screen">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -55,8 +53,7 @@
                         <div class="full">
                             <div class="center-desk">
                                 <div class="logo">
-                                    <a href="Login.php"><img src="../Assets/Templates/Main/images/logo.png"
-                                            alt=""></a>
+                                    <a href="index.html"><img src="../Assets/Templates/Main/images/logo.png" alt="#"></a>
                                 </div>
                             </div>
                         </div>
@@ -66,25 +63,31 @@
                             <div class="limit-box">
                                 <nav class="main-menu">
                                     <ul class="menu-area-main">
-                                        <li><a href="NewUser.php">SignUp User</a></li>
-                                        <li><a href="Company.php">SignUp Mobile Company</a></li>
-                                        <li><a href="ServiceCenter.php">SignUp Service Center</a></li>
+                                        <li class="active"> <a href="../index.php">Home</a> </li>
+                                        <li> <a href="NewUser.php">User Registration</a> </li>
+                                        <li><a href="ServiceCenter.php">Service Center Registration</a></li>
+                                        <li><a href="Company.php">Company Registration</a></li>
+                                        <!-- <li><a href="contact.html">Contact Us</a></li> -->
+                                        <!-- <li class="last">
+                                            <a href="#"><img src="Assets/Templates/Main/images/search_icon.png" alt="icon" /></a>
+                                        </li> -->
                                     </ul>
                                 </nav>
                             </div>
                         </div>
                     </div>
-                    <!--<div class="col-md-6 offset-md-6">
+                    <!-- <div class="col-md-6 offset-md-6">
                         <div class="location_icon_bottum">
                             <ul>
-                                <li><img src="../Assets/Templates/Main/icon/call.png" />(+71)9876543109</li>
-                                <li><img src="../Assets/Templates/Main/icon/email.png" />demo@gmail.com</li>
-                                <li><img src="../Assets/Templates/Main/icon/loc.png" />Location</li>
+                                <li><img src="icon/call.png" />(+71)9876543109</li>
+                                <li><img src="icon/email.png" />demo@gmail.com</li>
+                                <li><img src="icon/loc.png" />Location</li>
                             </ul>
                         </div>
-                    </div>-->
+                    </div> -->
                 </div>
             </div>
         </div>
         <!-- end header inner -->
     </header>
+    <!-- end header -->

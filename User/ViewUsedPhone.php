@@ -125,7 +125,7 @@ while($data = $result -> fetch_assoc())
 	<td><?php echo $data["usedphone_name"] ?></td>
     <td><?php echo $data["usedphone_details"] ?></td>
     <td><?php echo $data["usedphone_price"] ?></td>
- <td><a href="ViewUsedPhone.php?bookID=<?php echo $data["usedphone_id"]?>">BOOKING</a></td>
+ <td><a href="ViewUsedPhone.php?bookID=<?php echo $data["usedphone_id"]?>">BOOK</a></td>
 
     </tr> 
    

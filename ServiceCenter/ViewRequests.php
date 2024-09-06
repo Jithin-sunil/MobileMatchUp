@@ -11,7 +11,7 @@ if(isset($_GET["acpID"]))
 	?>
 	<script>
 		alert("Accepted");
-		window.location="AcceptedReq.php";
+		window.location="ViewRequests.php";
 	</script>
 	<?php
 	
@@ -26,7 +26,7 @@ if(isset($_GET["rejID"]))
 		?>
 		<script>
 			alert("Rejected");
-			window.location="RejectedReq.php";
+			window.location="ViewRequests.php";
 		</script>
 		<?php
 	}
@@ -118,16 +118,19 @@ while($data = $result -> fetch_assoc())
 	if($data['request_status']==0)
 	{
 		?>
-		<a href="ViewRequests.php?acpID=<?php echo $data["request_id"]?>">Accept</a>
-		<a href="ViewRequests.php?rejID=<?php echo $data["request_id"]?>">REJECT</a></td>
+		<a href="ViewRequests.php?acpID=<?php echo $data["request_id"]?>" class="btn btn-success btn-block">ACCEPT</a>
+		<a href="ViewRequests.php?rejID=<?php echo $data["request_id"]?>" class="btn btn-danger btn-block">REJECT</a></td>
 		<?php
 	}
 	else if($data['request_status']==1)
 	{
 		?>
-		<a href="Sendmail.php">Work Completed</a>
+		<a href="Sendmail.php?uid=<?php echo $data['user_id']?>">Work Completed</a>
 		<?php
 	}
+    else{
+        echo " Request Rejected ";
+    }
 
    ?>
 	

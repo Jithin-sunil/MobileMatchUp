@@ -14,16 +14,16 @@ include("../Connection/Connection.php");
 
     
   <img src="../Assets/Files/MobileDocs/<?php echo $rows['mobiledetails_photo'] ?>" width="150" height="150" alt=""><br>
-  Name:<?php echo $rows["mobile_name"]?><br />
-  Price:<?php echo $rows["mobile_price"]?><br />
-  Model:<?php echo $rows["mobile_model"]?><br />
-  Color:<?php echo $rows['mobiledetails_color'] ?><br>
-  Ram:<?php echo $rows['mobiledetails_ram'] ?><br>
-  Storage:<?php echo $rows['mobiledetails_storage'] ?><br>
-  Processor:<?php echo $rows['mobiledetails_processor'] ?><br
-  Disply:<?php echo $rows['mobiledetails_display'] ?><br>
-  Front Cam:<?php echo $rows['mobiledetails_frontcam'] ?><br>
-  Back Cam:<?php echo $rows['mobiledetails_rearcam'] ?><br>
+  Name:<?php echo $rows["mobile_name"]?><br /><br>
+  Price:<?php echo $rows["mobile_price"]?><br /><br>
+  Model:<?php echo $rows["mobile_model"]?><br /><br>
+  Color:<?php echo $rows['mobiledetails_color'] ?><br><br>
+  Ram:<?php echo $rows['mobiledetails_ram'] ?><br><br>
+  Storage:<?php echo $rows['mobiledetails_storage'] ?><br><br>
+  Processor:<?php echo $rows['mobiledetails_processor'] ?><br<br>
+  Disply:<?php echo $rows['mobiledetails_display'] ?><br><br>
+  Front Cam:<?php echo $rows['mobiledetails_frontcam'] ?><br><br>
+  Back Cam:<?php echo $rows['mobiledetails_rearcam'] ?><br><br>
   <a href="#" onclick="addCart(<?php echo $rows['mobile_id']?>)">Add to cart</a>
 
   
@@ -32,28 +32,22 @@ include("../Connection/Connection.php");
   </table>
   <script src="../Assets/JQ/jQuery.js"></script>
   <script>
- function addCart(id)
-            {
-                $.ajax({
-                    url: "../Assets/Ajax/AjaxAddCart.php?id=" + id,
-					
-                    success: function(response) {
-                        console.log(response);
-						
-                        if (response.trim() === "Added to Cart")
-                        {
-                            $("success").fadeIn(300).delay(1500).fadeOut(400);
-                        }
-                        else if (response.trim() === "Already Added to Cart")
-                        {
-                            $("warning").fadeIn(300).delay(1500).fadeOut(400);
-                        }
-                        else
-                        {
-                            $("failure").fadeIn(300).delay(1500).fadeOut(400);
-                        }
-                    }
-                });
+ function addCart(id) {
+    $.ajax({
+        url: "../Assets/Ajax/AjaxAddCart.php?id=" + id,
+        success: function(response) {
+            console.log(response);
+
+            if (response.trim() === "Added to Cart") {
+                $(".success").fadeIn(300).delay(1500).fadeOut(400);
+            } else if (response.trim() === "Already Added to Cart") {
+                $(".warning").fadeIn(300).delay(1500).fadeOut(400);
+            } else {
+                $(".failure").fadeIn(300).delay(1500).fadeOut(400);
             }
+        }
+    });
+}
+
 </script>
 

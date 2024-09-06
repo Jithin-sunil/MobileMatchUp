@@ -115,34 +115,35 @@ while($data=$result->fetch_assoc())
     <td><?php echo $data["booking_date"]?></td>
     <td>
     <?php 
-    if($data["booking_status"]==1 && $data["cart_status"]==1)
+    if($data["booking_status"]==1 )
     {
         echo "Payment Pending"; 
     }
-    else if($data["booking_status"]==2 && $data["cart_status"]==1)
+    else if($data["booking_status"]==2 )
     {
         echo "Payment Completed";
         ?>
         <a href="Bill.php?id=<?php echo $data['cart_id']?>">Bill</a>
         <?php 
     }
-    else if($data["booking_status"]==2 && $data["cart_status"]==3)
+    else if($data["booking_status"]==3 )
     {
         ?>
         Product Packed
         <?php 
     }
-    else if($data["booking_status"]==2 && $data["cart_status"]==4)
+    else if($data["booking_status"]==4 )
     {
         ?>
         Product Shipped
         <?php 
     }
-    else if($data["booking_status"]==2 && $data["cart_status"]==5)
+    else if($data["booking_status"]==5 )
     {
         ?>
         Order Completed /
         <a href="Rating.php?pid=<?php echo $data["mobile_id"]; ?>">Review</a>/
+        <a href="Comments.php?mid=<?php echo $data['mobile_id']?>">Comments</a>
         <?php 
     }
     ?>

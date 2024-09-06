@@ -243,7 +243,7 @@ include('SessionValidation.php');
                 <h3><?php echo $row0["mobile_name"]?></h3>
                 <p>Price: <?php echo $row0["mobile_price"]?></p>
                 <p>Model: <?php echo $row0["mobile_model"]?></p>
-                <p><a href="#" onclick="addCart(<?php echo $row0['mobile_id']?>)"> Buy</a></p>
+                <p><a href="javascript:void(0)" onclick="addCart(<?php echo $row0['mobile_id']?>)" > Buy</a></p>
                 <?php
                 }
                 ?>
@@ -284,29 +284,23 @@ include('SessionValidation.php');
             }
         });
     }
-    function addCart(id)
-            {
-                $.ajax({
-                    url: "../Assets/Ajax/AjaxAddCart.php?id=" + id,
-					
-                    success: function(response) {
-                        console.log(response);
-						
-                        if (response.trim() === "Added to Cart")
-                        {
-                            $("success").fadeIn(300).delay(1500).fadeOut(400);
-                        }
-                        else if (response.trim() === "Already Added to Cart")
-                        {
-                            $("warning").fadeIn(300).delay(1500).fadeOut(400);
-                        }
-                        else
-                        {
-                            $("failure").fadeIn(300).delay(1500).fadeOut(400);
-                        }
-                    }
-                });
+    function addCart(id) {
+    $.ajax({
+        url: "../Assets/Ajax/AjaxAddCart.php?id=" + id,
+        success: function(response) {
+            console.log(response);
+
+            if (response.trim() === "Added to Cart") {
+                $(".success").fadeIn(300).delay(1500).fadeOut(400);
+            } else if (response.trim() === "Already Added to Cart") {
+                $(".warning").fadeIn(300).delay(1500).fadeOut(400);
+            } else {
+                $(".failure").fadeIn(300).delay(1500).fadeOut(400);
             }
+        }
+    });
+}
+
     </script>
 
 </body>

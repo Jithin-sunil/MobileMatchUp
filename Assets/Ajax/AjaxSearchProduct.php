@@ -216,7 +216,7 @@ include("../Connection/Connection.php");
                                         <?php
                                         }
                                  ?>
-                                          <!-- <a href="ViewMore.php?id=<?php echo $rowS["mobiledetails_id"]; ?>" class="btn btn-warning btn-block">View More</a>  -->
+                                          <a href="ViewMore.php?mid=<?php echo $rowS["mobile_id"]; ?>" class="btn btn-warning btn-block">View More</a> 
                                     </div>
                                 </div>
                             </div>

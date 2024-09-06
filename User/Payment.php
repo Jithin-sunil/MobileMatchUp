@@ -3,7 +3,7 @@ include('SessionValidation.php');
 ob_start();
 
 	include("../Assets/Connection/Connection.php");
-    session_start();
+
 	if(isset($_POST["btn_pay"]))
 	{
 		

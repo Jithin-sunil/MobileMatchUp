@@ -85,7 +85,7 @@ if(isset($_GET["delID"]))
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Mobile Details</title>
 <style>
-    body {
+    /* body {
         background-color: 000ff; /* Light pink background */
         font-family: 'Arial', sans-serif;
         color: #333;
@@ -94,7 +94,7 @@ if(isset($_GET["delID"]))
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
+    } */
 
     a {
         color: #ff4d4d; /* Soft red for links */
@@ -152,24 +152,48 @@ if(isset($_GET["delID"]))
     tr:nth-child(even) td {
         background-color: #ffe6e6; /* Light pink for alternate rows */
     }
-    #tab th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #dc3545;
-    color: white;
-}
+
+    /* Button styling */
+    input[type="submit"] {
+        background-color: #28a745; /* Green background */
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #218838; /* Darker green on hover */
+    }
+
+    /* Specific styling for cancel button */
+    input[type="submit"]#btncancel {
+        background-color: #6c757d; /* Grey background for cancel */
+    }
+
+    input[type="submit"]#btncancel:hover {
+        background-color: #5a6268; /* Darker grey on hover */
+    }
+    .main
+    {
+      display:flex;
+      justify-content: center;
+      align-items: center;
+
+    }
 </style>
 </head>
 
 <body>
 <form action="" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <div class="main">
   <table width="200" border="1">
   <tr>
       <td>photo</td>
       <td><label for="filephoto"></label>
       <input type="file" name="filephoto" id="filephoto" />    
-      
 
     <tr>
       <td width="109" scope="col">Name</td>
@@ -221,20 +245,19 @@ if(isset($_GET["delID"]))
       <td><label for="txtbattery"></label>
       <input type="text" name="txtbattery" id="txtbattery" /></td>
     </tr>
-      <!-- <tr>
-      <td>Price</td>
-      <td><label for="txtprice"></label>
-      <input type="text" name="txtprice" id="txtprice" /></td>
-    </tr> -->
     <tr>
-      <td colspan="2" align="center"><input type="submit" name="btnsubmit" id="btnsubmit" value="Submit" />        <input type="submit" name="btncancel" id="btncancel" value="Cancel" /></td>
+      <td colspan="2" align="center">
+        <input type="submit" name="btnsubmit" id="btnsubmit" value="Submit" />        
+        <input type="submit" name="btncancel" id="btncancel" value="Cancel" />
+      </td>
     </tr>
   </table>
+  </div>
 </form>
+
 <br />
   <table border="1" align="center">
 <tr>
-
 <td>SLNO</td>
 <td>Photo</td>
 <td>Name</td>
@@ -249,9 +272,8 @@ if(isset($_GET["delID"]))
 <td>Battery</td>
 <td>Price</td>
 <td>Action</td>
-
-
 </tr>
+
 <?php
 $selquery="select * from tbl_mobiledetails where mobile_id='".$_GET['mID']."'";
 $result=$con->query($selquery);
@@ -273,10 +295,10 @@ while($data = $result -> fetch_assoc())
     <td><?php echo $data["mobiledetails_frontcam"] ?></td>
     <td><?php echo $data["mobiledetails_display"] ?></td>
     <td><?php echo $data["mobiledetails_battery"] ?></td>
-     <!-- <td><?php echo $data["mobiledetails_price"] ?></td> -->
-    <td><a href="MobileDetails.php?delID=<?php echo $data["mobiledetails_id"]?>">DELETE</a>
-    <a href="AddStock.php?mid=<?php echo $data["mobile_id"]?>">Add Stock</a></td>
-    
+    <td>
+        <a href="MobileDetails.php?delID=<?php echo $data["mobiledetails_id"]?>">DELETE</a>
+        <a href="AddStock.php?mid=<?php echo $data["mobile_id"]?>">Add Stock</a>
+    </td>
     </tr> 
    
     <?php
@@ -285,6 +307,8 @@ while($data = $result -> fetch_assoc())
 </table>
 </form>
 </body>
+</html>
+
 
 <?php
 include('Footer.php');
