@@ -32,7 +32,7 @@
             </div>
             <div class="copyright">
                 <div class="container">
-                    <p>© 2019 All Rights Reserved. Design By<a href="https://html.design/"> Free Html Templates</a></p>
+                    <p>© 2024 All Rights Reserved. Design By<a href="https://html.design/"> MobileMatchup</a></p>
                 </div>
             </div>
         </div>

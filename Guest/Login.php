@@ -104,7 +104,7 @@ if(isset($_POST["btnlogin"]))
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Admin/User:Homepage.php</title>
+<title>MobileMatchup</title>
 <!-- <form id="form1" name="form1" method="post" action="">
   <table width="276" height="120" border="1">
     <tr>
@@ -269,7 +269,7 @@ button{
         <input type="password" name="txtpassword" id="txtpassword" />
 
         <!-- <button>Log In</button> -->
-		<input type="submit" name="btnlogin" id="btnlogin" value="Submit" />
+		<input type="submit" name="btnlogin" id="btnlogin" value="Login" />
         <!-- <div class="social">
           <div class="go"><i class="fab fa-google"></i>  Google</div>
           <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>

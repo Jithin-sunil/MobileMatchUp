@@ -11,7 +11,7 @@ include('SessionValidation.php');
 
 <head>
     <meta charset="utf-8">
-    <title>DarkPan - Bootstrap 5 Admin Template</title>
+    <title>MobileMatchup</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -374,7 +374,7 @@ $yValues = [];
                                     </table>
                                 </div>
                             </div>
-                            <center><input type="button" onclick="printDiv('pri')" id="invoice-print"
+                            <center><input type="button" onClick="printDiv('pri')" id="invoice-print"
                                     class="btn btn-success" value="Print" /></center>
                         </div>
                     </div>
