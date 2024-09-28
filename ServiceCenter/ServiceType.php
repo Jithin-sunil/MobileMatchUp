@@ -10,12 +10,27 @@ if(isset($_POST['btnadd']))
 	$Service=$_POST['txtservice'];
 	$Details=$_POST['details'];
 	$Rate=$_POST['rate'];
+
+  $s="select * from tbl_servicetype where servicetype_type  = '".$Service."'";
+  $res=$con->query($s);
+  if($res->num_rows>0)
+  {
+    ?>
+     <script>alert("Service Type already exists");</script>
+    <?php
+  }
+  else
+  {
+    $insQry="insert into tbl_servicetype(servicetype_type,servicetype_details,servicetype_rate,servicecenter_id)values('$Service','$Details','$Rate','".$_SESSION["sid"]."')";
+    if($con->query($insQry))
+    {
+      ?>
+       <script>alert("Service Type added successfully");</script>
+      <?php
+    }
+  }
 	
-	$insQry="insert into tbl_servicetype(servicetype_type,servicetype_details,servicetype_rate,servicecenter_id)values('$Service','$Details','$Rate','".$_SESSION["sid"]."')";
-	if($con->query($insQry))
-	{
-		echo"inserted";
-	}
+	
 }
 if(isset($_GET["delID"]))
 {

@@ -202,7 +202,7 @@ $data=$result->fetch_assoc();
             <td><img src="../Assets/Files/MobileDocs/<?php echo $data["mobiledetails_photo"];?>" width="119" height="92" /></td>
             <td><?php echo $data["mobiledetails_price"] ?></td>
             <td><?php echo $data["cart_quantity"] ?></td>
-            <td><?php echo $data["mobiledetails_price"] * $data["cart_quantity"] ?></td>
+            <td><?php echo $data["mobile_price"] * $data["cart_quantity"] ?></td>
           </tr>
         </tbody>
         <tfoot></tfoot>
@@ -214,7 +214,7 @@ $data=$result->fetch_assoc();
         <tr style="background: #fcbd02">
           <th>Total Order Value</th>
           <td style="width: 70px; text-align: right; border-right: none">
-            <b><?php echo $data["mobiledetails_price"] * $data["cart_quantity"] ?></b>
+            <b><?php echo $data["mobile_price"] * $data["cart_quantity"] ?></b>
           </td>
           <td colspan="5" style="border-left: none"></td>
         </tr>

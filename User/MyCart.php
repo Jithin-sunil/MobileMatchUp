@@ -401,7 +401,7 @@ include("../Assets/Connection/Connection.php");
                     <!-- <?php echo $rowpr["product_details"] ?> -->
                     </p>
                 </div>
-                <div class="product-price "	><?php echo $rowpr["mobiledetails_price"] ?></div>
+                <div class="product-price "	><?php echo $rowpr["mobile_price"] ?></div>
                 <div class="product-quantity">
                 <select id="<?php echo $row["cart_id"]?>" style="width:90px">
                 	<?php
@@ -419,7 +419,7 @@ include("../Assets/Connection/Connection.php");
                 </div>
                 <div class="product-line-price">
                     <?php
-                        $pr = $rowpr["mobiledetails_price"];
+                        $pr = $rowpr["mobile_price"];
                         $qty = $row["cart_quantity"];
                         $tot = (int)$pr * (int)$qty;
                         echo $tot;

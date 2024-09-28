@@ -45,7 +45,7 @@ if(isset($_POST['btnsubmit']))
         ?>
         <script>
           alert('inserted');
-          window.location="MobileDetails.php";
+          window.location="Mobile.php";
         </script>
         <?php
       }

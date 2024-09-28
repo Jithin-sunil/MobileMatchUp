@@ -140,7 +140,7 @@ if(isset($_POST["btnadd"]))
     <tr>
       <td>Price</td>
       <td><label for="txtprice"></label>
-      <input type="text" name="txtprice" id="txtprice" /></td>
+      <input type="text" name="txtprice" id="txtprice"  minlength="4" maxlength="7" pattern="^\d+$" title="Please enter a valid price (e.g., 100)"/></td>
     </tr>
     
     <tr>

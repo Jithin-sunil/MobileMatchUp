@@ -25,13 +25,13 @@ if(isset($_POST['btnreg']))
 	$place=$_POST['sel_place'];
 	
 
-	$u="select * from tbl_user where user_email = '".$email."'";
+	$u="select * from tbl_user where user_email  = '".$Email."'";
   $r=$con->query($u);
-  $c="select * from tbl_company where company_email = '".$email."'";
+  $c="select * from tbl_company where company_email = '".$Email."'";
   $re=$con->query($c);
-	$s="select * from tbl_servicecenter where servicecenter_email = '".$email."'";
+	$s="select * from tbl_servicecenter where servicecenter_email  = '".$Email."'";
   $res=$con->query($s);
-  $a="select * from tbl_admin where admin_email = '".$email."'";
+  $a="select * from tbl_admin where admin_email = '".$Email."'";
   $row=$con->query($a);
   if($r->num_rows>0 || $re->num_rows>0 || $res->num_rows>0 || $row->num_rows>0)
   {
@@ -41,7 +41,6 @@ if(isset($_POST['btnreg']))
     </script>
     <?php
   }
-
 	else{
     $insQry="insert into tbl_servicecenter(servicecenter_photo,servicecenter_name,servicecenter_email,servicecenter_password,servicecenter_contact,servicecenter_address,servicecenter_proof,place_id)
     values('$photo','$name','$Email','$Password','$contact','$address','$proof','$place')";
@@ -49,7 +48,7 @@ if(isset($_POST['btnreg']))
     {
       ?>
       <script>
-      alert('Email already exists');
+      alert('Registerd');
     </script>
     <?php
     }
@@ -184,7 +183,7 @@ label {
      <tr>
       <td>Contact</td>
       <td><label for="txtcontact"></label>
-      <input type="text" name="txtcontact" id="txtcontact" /></td>
+      <input type="text" name="txtcontact" id="txtcontact" maxlength="10" /></td>
     </tr>
      <tr>
       <td>Address</td>
@@ -206,8 +205,8 @@ label {
    <td>District</td>
    
    <td>
-   <select name="selDistrict" onchange="getPlace(this.value)">
-   <option value="-----select-----">---select----</option>
+   <select name="selDistrict" id="selDistrict" onchange="getPlace(this.value)">
+   <option value="">---select----</option>
    
    <?php
 $selquery="select * from  tbl_district";
@@ -308,5 +307,6 @@ include('Footer.php');
     }
 
     return true;
+  }
 
 </script>
